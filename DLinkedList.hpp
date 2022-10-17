@@ -8,6 +8,7 @@ typedef enum {GRYFFINDOR, RAVENCLAW, HUFFLEPUFF, SLYTHERIN};
 
 class Node {
     public:
+        Node();
         Node(string first, string last, int house, int a);
     private:
         Node* next;
@@ -24,8 +25,8 @@ class DLinkedList {
         DLinkedList(); // constructor
         ~DLinkedList(); // destructor
         bool empty() const; // is list empty?
-        const Node& front() const; // get front element
-        const Node& back() const; // get back element
+        const Node* front() const; // get front element
+        const Node* back() const; // get back element
         void addFront(const Node& n); // add to front of list
         void addBack(const Node& n); // add to back of list
         void removeFront(); // remove from front
